@@ -3,12 +3,19 @@ import java.util.Scanner;
 public class App {
     int score=0,out_of=0;
     void game(Scanner sc){
-        int range,random_number,input_number,game_counter=3;
+        int minrange,maxrange,random_number,input_number,game_counter=3;
         out_of++;
+        System.out.println("Enter the minimum range:");
+        minrange=sc.nextInt();
         System.out.println("Enter the maximum range:");
-        range=sc.nextInt();
+        maxrange=sc.nextInt();
+        if(minrange>=maxrange)
+        {
+            System.out.println("Enter a correct range!!");
+            return;
+        }
         Random rand=new Random();
-        random_number=1+rand.nextInt(range);
+        random_number=rand.nextInt(maxrange-minrange)+minrange;
         while(game_counter>=0){
             System.out.println("Enter the number:");
             input_number=sc.nextInt();
