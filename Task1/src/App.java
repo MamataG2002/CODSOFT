@@ -13,9 +13,9 @@ public class App {
             System.out.println("Enter the number:");
             input_number=sc.nextInt();
             if (input_number<random_number)
-                System.out.println("The number is lesser than the number.No of tries left .. "+ --game_counter);
+                System.out.println("The number is too low!!.No of tries left .. "+ --game_counter);
             else if(input_number>random_number)
-                System.out.println("The number is greater than the number.No of tries left .. "+ --game_counter);
+                System.out.println("The number is too high!!.No of tries left .. "+ --game_counter);
             else{
                 System.out.println("You Win!!You Guessed The Correct Number");
                 score++;
